@@ -1,0 +1,100 @@
+/* line 3, styles.scss */
+.screen {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  padding: 15px;
+}
+/* line 8, styles.scss */
+.screen > div {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #33cccc;
+  position: absolute;
+  margin: 2px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* line 17, styles.scss */
+.screen > div.col-1 {
+  left: 17px;
+}
+/* line 20, styles.scss */
+.screen > div.col-2 {
+  left: 29px;
+}
+/* line 23, styles.scss */
+.screen > div.col-3 {
+  left: 41px;
+}
+/* line 26, styles.scss */
+.screen > div.col-4 {
+  left: 53px;
+}
+/* line 29, styles.scss */
+.screen > div.col-5 {
+  left: 65px;
+}
+/* line 32, styles.scss */
+.screen > div.col-6 {
+  left: 77px;
+}
+/* line 35, styles.scss */
+.screen > div.col-7 {
+  left: 89px;
+}
+/* line 38, styles.scss */
+.screen > div.col-8 {
+  left: 101px;
+}
+/* line 41, styles.scss */
+.screen > div.col-9 {
+  left: 113px;
+}
+/* line 44, styles.scss */
+.screen > div.col-10 {
+  left: 125px;
+}
+/* line 47, styles.scss */
+.screen > div.row-1 {
+  top: 17px;
+}
+/* line 50, styles.scss */
+.screen > div.row-2 {
+  top: 29px;
+}
+/* line 53, styles.scss */
+.screen > div.row-3 {
+  top: 41px;
+}
+/* line 56, styles.scss */
+.screen > div.row-4 {
+  top: 53px;
+}
+/* line 59, styles.scss */
+.screen > div.row-5 {
+  top: 65px;
+}
+/* line 62, styles.scss */
+.screen > div.row-6 {
+  top: 77px;
+}
+/* line 65, styles.scss */
+.screen > div.row-7 {
+  top: 89px;
+}
+/* line 68, styles.scss */
+.screen > div.row-8 {
+  top: 101px;
+}
+/* line 71, styles.scss */
+.screen > div.row-9 {
+  top: 113px;
+}
+/* line 74, styles.scss */
+.screen > div.row-10 {
+  top: 125px;
+}
