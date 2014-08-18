@@ -1,0 +1,78 @@
+@import "compass/css3";
+
+.screen {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  padding: 15px;
+  &> div {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #33cccc;
+    position: absolute;
+    margin: 2px;
+
+    @include transition(all 0.5s);
+    &.col-1 {
+      left: 17px;
+    }
+    &.col-2 {
+      left: 29px;
+    }
+    &.col-3 {
+      left: 41px;
+    }
+    &.col-4 {
+      left: 53px;
+    }
+    &.col-5 {
+      left: 65px;
+    }
+    &.col-6 {
+      left: 77px;
+    }
+    &.col-7 {
+      left: 89px;
+    }
+    &.col-8 {
+      left: 101px;
+    }
+    &.col-9 {
+      left: 113px;
+    }
+    &.col-10 {
+      left: 125px;
+    }
+    &.row-1 {
+      top: 17px;
+    }
+    &.row-2 {
+      top: 29px;
+    }
+    &.row-3 {
+      top: 41px;
+    }
+    &.row-4 {
+      top: 53px;
+    }
+    &.row-5 {
+      top: 65px;
+    }
+    &.row-6 {
+      top: 77px;
+    }
+    &.row-7 {
+      top: 89px;
+    }
+    &.row-8 {
+      top: 101px;
+    }
+    &.row-9 {
+      top: 113px;
+    }
+    &.row-10 {
+      top: 125px;
+    }
+  }
+}

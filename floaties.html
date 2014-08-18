@@ -1,0 +1,48 @@
+<html>
+<head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="screen">
+    <div class="col-1 row-1"></div><div class="col-2 row-1"></div><div class="col-3 row-1"></div><div class="col-4 row-1"></div><div class="col-5 row-1"></div><div class="col-6 row-1"></div><div class="col-7 row-1"></div><div class="col-8 row-1"></div><div class="col-9 row-1"></div><div class="col-10 row-1"></div>
+    <div class="col-1 row-2"></div><div class="col-2 row-2"></div><div class="col-3 row-2"></div><div class="col-4 row-2"></div><div class="col-5 row-2"></div><div class="col-6 row-2"></div><div class="col-7 row-2"></div><div class="col-8 row-2"></div><div class="col-9 row-2"></div><div class="col-10 row-2"></div>
+    <div class="col-1 row-3"></div><div class="col-2 row-3"></div><div class="col-3 row-3"></div><div class="col-4 row-3"></div><div class="col-5 row-3"></div><div class="col-6 row-3"></div><div class="col-7 row-3"></div><div class="col-8 row-3"></div><div class="col-9 row-3"></div><div class="col-10 row-3"></div>
+    <div class="col-1 row-4"></div><div class="col-2 row-4"></div><div class="col-3 row-4"></div><div class="col-4 row-4"></div><div class="col-5 row-4"></div><div class="col-6 row-4"></div><div class="col-7 row-4"></div><div class="col-8 row-4"></div><div class="col-9 row-4"></div><div class="col-10 row-4"></div>
+    <div class="col-1 row-5"></div><div class="col-2 row-5"></div><div class="col-3 row-5"></div><div class="col-4 row-5"></div><div class="col-5 row-5"></div><div class="col-6 row-5"></div><div class="col-7 row-5"></div><div class="col-8 row-5"></div><div class="col-9 row-5"></div><div class="col-10 row-5"></div>
+    <div class="col-1 row-6"></div><div class="col-2 row-6"></div><div class="col-3 row-6"></div><div class="col-4 row-6"></div><div class="col-5 row-6"></div><div class="col-6 row-6"></div><div class="col-7 row-6"></div><div class="col-8 row-6"></div><div class="col-9 row-6"></div><div class="col-10 row-6"></div>
+    <div class="col-1 row-7"></div><div class="col-2 row-7"></div><div class="col-3 row-7"></div><div class="col-4 row-7"></div><div class="col-5 row-7"></div><div class="col-6 row-7"></div><div class="col-7 row-7"></div><div class="col-8 row-7"></div><div class="col-9 row-7"></div><div class="col-10 row-7"></div>
+    <div class="col-1 row-8"></div><div class="col-2 row-8"></div><div class="col-3 row-8"></div><div class="col-4 row-8"></div><div class="col-5 row-8"></div><div class="col-6 row-8"></div><div class="col-7 row-8"></div><div class="col-8 row-8"></div><div class="col-9 row-8"></div><div class="col-10 row-8"></div>
+    <div class="col-1 row-9"></div><div class="col-2 row-9"></div><div class="col-3 row-9"></div><div class="col-4 row-9"></div><div class="col-5 row-9"></div><div class="col-6 row-9"></div><div class="col-7 row-9"></div><div class="col-8 row-9"></div><div class="col-9 row-9"></div><div class="col-10 row-9"></div>
+    <div class="col-1 row-10"></div><div class="col-2 row-10"></div><div class="col-3 row-10"></div><div class="col-4 row-10"></div><div class="col-5 row-10"></div><div class="col-6 row-10"></div><div class="col-7 row-10"></div><div class="col-8 row-10"></div><div class="col-9 row-10"></div><div class="col-10 row-10"></div>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script>
+    $(function(){
+      
+      $('body').mousemove(function(e) {
+        var pagex = e.pageX - 10;
+        var pagey = e.pageY - 10;
+        $('.screen > div').each(function(){
+          var x = parseInt($(this).css('left')) + $(this).width() / 2;
+          var y = parseInt($(this).css('top')) + $(this).height() / 2;
+          if (Math.abs(pagex - x) < 15 && Math.abs(pagey - y) < 15) {
+            if ((pagex - x) > 0) {
+              var diffx = (pagex - x) - 15;  
+            } else if ((pagex - x) < 0) {
+              var diffx = 15 - (pagex - x);
+            }
+            if ((pagey - y) > 0) {
+              var diffy = (pagey - y) - 15;
+            } else if ((pagey - y) - 15) {
+              var diffy = 15 - (pagey - y);
+            }
+            $(this).css({'transform': 'translate(' + diffx + 'px, ' + diffy + 'px)'});
+          } else {
+            $(this).css({'transform': 'translate(0px, 0px)'});
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
